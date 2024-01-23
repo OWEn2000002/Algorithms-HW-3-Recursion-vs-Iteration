@@ -1,0 +1,38 @@
+  2、【Answer】：
+    I try to write the linear search algorithms in Python. Here are the implementations with comments to explain each section:
+    These Python implementations demonstrate how the linear search algorithm can be written in both iterative and recursive forms using a programming language.
+    At Last, I test the linear search algorithms function, works successs;
+
+# ==================================================================================================================================
+### 1)、 Iterative Linear Search Algorithm in Python
+### Comment :
+    In this Python function, we iterate through the array `arr` using a for loop and compare each element with the value `x`. 
+    If we find a match, we return the index of the element. If the element is not found, we return -1.
+# ==================================================================================================================================
+
+    ```
+    def iterative_linear_search(arr, x):
+        for i in range(len(arr)):
+            if arr[i] == x:
+                return i                  # Return the index if match found
+        return -1                         # Return -1 if element not found
+    ```
+
+# ==================================================================================================================================
+### 2)、 Recursive Linear Search Algorithm in Python
+### Comment:
+    In this Python function, we use recursion to search for the element `x` in the array `arr`. 
+    We start searching from index `start`, and if we find a match at index `start`, we return the index. 
+    If not, we make a recursive call to continue the search at index `start+1`. 
+    If we reach the end of the array without finding the element, we return -1.
+# ==================================================================================================================================
+
+    ```
+    def recursive_linear_search(arr, x, start=0):
+        if start >= len(arr):
+            return -1  # Base case: element not found
+        if arr[start] == x:
+            return start  # Base case: return index if match found
+        else:
+            return recursive_linear_search(arr, x, start+1)  # Recursively search from the next index
+    ```

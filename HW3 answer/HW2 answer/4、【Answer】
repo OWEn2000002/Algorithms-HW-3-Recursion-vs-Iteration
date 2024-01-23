@@ -1,0 +1,28 @@
+4、【Answer】
+
+  I try to use for lop to Calculate the sum of 1 to 100：
+
+```
+	def for_sum100():
+	  result = 0
+	  for i in range(1, 101):
+	    result += i
+	  print(result)
+
+	  return result
+```
+
+
+Implementing recursive function for calculating the sum of 1 to 100
+```
+	def recursive_sum100(n):
+	    if n == 1:
+	        return 1
+	    else:
+	        return n + recursive_sum(n-1)
+
+	result = recursive_sum(100)
+	print(result)
+
+	return result
+```

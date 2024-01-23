@@ -1,0 +1,41 @@
+1、【Answer】：
+  here is a pseudo code for linear search algorithm both recursively and iteratively, the code and comments are as follows:
+
+  1) Iterative Linear Search Algorithm, 
+
+    /*******************************************************************************************************
+    /* 1  Iterative Linear Search Algorithm
+    /* =====================================================================================================
+    /* Comment:
+    /* In this algorithm, we iterate through the array arr and compare each element with the value x. 
+    /* If we find a match, we return the index of the element. If the element is not found, we return -1.
+    /*
+    ********************************************************************************************************/
+    function iterativeLinearSearch(arr, x):
+        n = arr.length
+        for i from 0 to n-1:
+            if arr[i] equals x:
+                return i
+        return -1
+
+
+  2) Recursive Linear Search Algorithm
+
+    /*******************************************************************************************************
+    /* 2  Recursive Linear Search Algorithm
+    /* =====================================================================================================
+    /* Comment:
+    /* In this algorithm, we use recursion to search for the element x in the array arr. 
+    /* We start searching from index start, and if we find a match at index start, we return the index. 
+    /* If not, we make a recursive call to continue the search at index start+1.
+    /* If we reach the end of the array without finding the element, we return -1.
+    ********************************************************************************************************/
+    function recursiveLinearSearch(arr, x, start):
+        if start >= arr.length:
+            return -1
+        if arr[start] equals x:
+            return start
+        else:
+            return recursiveLinearSearch(arr, x, start+1)
+
+  These algorithms are used to search for a specific element in an array by checking each element one by one.

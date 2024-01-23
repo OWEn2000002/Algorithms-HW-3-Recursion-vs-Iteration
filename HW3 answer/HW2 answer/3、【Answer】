@@ -1,0 +1,47 @@
+3、【Answer】：
+ Here's the binary search algorithm written in recursive form in both pseudo code and Python, along with comments to explain each section:
+
+  1) Write in Pseudo Code:
+    ### Recursive Binary Search Algorithm (Pseudo Code)
+    ### Comment:
+        In this pseudo code, we define a recursive function `recursiveBinarySearch` that takes an array `arr`, value `x` to search for, and the indices `left` and `right`. 
+        We calculate the middle index `mid` and compare the element at `mid` with `x`. If it matches, we return the index. 
+        If not, we recursively call the function on the left or right half of the array until the element is found or the search range becomes invalid.
+
+    ```
+    function recursiveBinarySearch(arr, x, left, right):
+        if right >= left:
+            mid = left + (right - left) / 2
+            if arr[mid] equals x:
+                return mid  # Element found at middle
+            elif arr[mid] > x:
+                return recursiveBinarySearch(arr, x, left, mid - 1)    # Search left half
+            else:
+                return recursiveBinarySearch(arr, x, mid + 1, right)   # Search right half
+        else:
+            return -1                                                  # Element not found
+    ```
+
+
+  2) Choice Python as programming language and Write in Python:
+    ### Recursive Binary Search Algorithm in Python
+    ### Comment:
+        In this Python function, we implement the recursive binary search algorithm using the same logic as described in the pseudo code.
+        The function takes an array `arr`, value `x` to search for, and the indices `left` and `right`. 
+        We calculate the middle index `mid` and compare the element at `mid` with `x`. 
+        If it matches, we return the index. If not, we recursively call the function on the left or right half of the array until the element is found or the search range becomes invalid.
+
+
+    ```
+    def recursive_binary_search(arr, x, left, right):
+        if right >= left:
+            mid = left + (right - left) // 2
+            if arr[mid] == x:
+                return mid  # Element found at middle
+            elif arr[mid] > x:
+                return recursive_binary_search(arr, x, left, mid - 1)  # Search left half
+            else:
+                return recursive_binary_search(arr, x, mid + 1, right)  # Search right half
+        else:
+            return -1  # Element not found
+    ```
